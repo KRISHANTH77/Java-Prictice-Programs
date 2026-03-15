@@ -1,43 +1,47 @@
 public class OOPSBannerApp {
 
-    // Method to print letter O
-    public static void printO() {
-        System.out.println(" *** ");
-        System.out.println("*     *");
-        System.out.println("*     *");
-        System.out.println("*     *");
-        System.out.println(" *** ");
+    // Static method for letter O
+    public static String[] getO() {
+        return new String[]{
+            " *** ",
+            "*     *",
+            "*     *",
+            "*     *",
+            " *** "
+        };
     }
 
-    // Method to print letter P
-    public static void printP() {
-        System.out.println("*** ");
-        System.out.println("*    *");
-        System.out.println("*** ");
-        System.out.println("*     ");
-        System.out.println("*     ");
+    // Static method for letter P
+    public static String[] getP() {
+        return new String[]{
+            "***  ",
+            "*    * ",
+            "***  ",
+            "*      ",
+            "*      "
+        };
     }
 
-    // Method to print letter S
-    public static void printS() {
-        System.out.println(" ***");
-        System.out.println("*     ");
-        System.out.println(" ***");
-        System.out.println("      *");
-        System.out.println(" ***");
+    // Static method for letter S
+    public static String[] getS() {
+        return new String[]{
+            " *** ",
+            "*      ",
+            " *** ",
+            "      *",
+            " *** "
+        };
     }
 
     public static void main(String[] args) {
 
-        printO();
-        System.out.println();
+        String[] O1 = getO();
+        String[] O2 = getO();
+        String[] P = getP();
+        String[] S = getS();
 
-        printO();
-        System.out.println();
-
-        printP();
-        System.out.println();
-
-        printS();
+        for(int i = 0; i < O1.length; i++) {
+            System.out.println(O1[i] + " " + O2[i] + " " + P[i] + " " + S[i]);
+        }
     }
 }
